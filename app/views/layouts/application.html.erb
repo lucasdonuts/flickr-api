@@ -11,6 +11,23 @@
   </head>
 
   <body>
+
+    <% if flash[:notice] %>
+      <div class="notification is-primary global-notification has-text-centered">
+        <p class="notice"><%= notice %></p>
+      </div>
+    <% elsif flash[:alert] %>
+      <div class="notification is-danger is-light global-notification has-text-centered">
+        <p class="alert"><%= alert %></p>
+      </div>
+    <% end %>
+
+    <nav class="level">
+      <div class="level-item has-text-centered">
+        <h1 class="title">Flickr Search</h1>
+      </div>
+    </nav>
+
     <%= yield %>
   </body>
 </html>

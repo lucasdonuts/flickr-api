@@ -30,6 +30,9 @@ gem 'bootsnap', '>= 1.4.4', require: false
 
 gem 'flickr', '~> 2.0', '>= 2.0.2'
 gem 'figaro', '~> 1.2'
+gem 'bulma-rails', '~> 0.9.1'
+gem 'guard', '~> 2.16', '>= 2.16.2'
+gem 'guard-livereload', '~> 2.5', '>= 2.5.2', require: false
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

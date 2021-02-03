@@ -1,0 +1,23 @@
+<section class="section">
+  <div class="container">
+    <div class="columns has-text-centered">
+      <div class="column is-half is-offset-one-quarter">
+        <%= render 'form' %>
+      </div>
+    </div>
+  </div>
+</section>
+
+<% if params[:user_id] && !@photos.nil? %>
+  <section class="section">
+    <div class="container">
+      <div class="columns is-multiline is-mobile has-text-centered is-vcentered">
+        <% @photos.each do |photo| %>
+          <figure class="column is-image">
+            <%= image_tag Flickr.url(photo), class: "image" %>
+          </figure>
+        <% end %>
+      </div>
+    </div>
+  </section>
+<% end %>
